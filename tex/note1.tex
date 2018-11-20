@@ -12,6 +12,30 @@
 
 \begin{document}
 
-テスト
+\section{Quantum Annealing}
+\begin{itemize}
+  \item The energy landscape of a random Ising model like an Ising spin glass has a complex multimordal structure. It is difficult to find out its ground state.
+  \item Because of the exponential increase in the number of states (exceeds $10^2$) we can't examine the energy of all the state.
+  \item We can use the thermal fluctuation in simulated annealing. It helps the state of a system hop from one energy miminum to another. The ground state can be obtained by decreasing the temperature slowly.
+\end{itemize}
+
+\subsection{Combinatorial Optimization Problems}
+
+\begin{eqnarray}
+  H_{TSP} = \sum_{{\rm all \ links}} d_{\left <i, j \right >} \frac{S_{\left < i, j \right >} + 1}{2} \ .
+\end{eqnarray}
+under the conditions
+
+\begin{eqnarray}
+ \sum_{j} d_{\left <j, i \right >} \frac{S_{\left < i, j \right >} + 1}{2} = 1 \,
+\end{eqnarray}
+and
+\begin{eqnarray}
+ \sum_{j} d_{\left <i, j \right >} \frac{S_{\left < i, j \right >} + 1}{2} = 1 \ .
+\end{eqnarray}
+
+\subsection{Non-crossing Rule}
+
+Let $H$ be an Hermite matrix of dimenstion $d$. If H has $f$ different engenvalues and each of them has $m_i \ (i = 1, 2, ..., f)$  multiplicity.
 
 \end{document}
