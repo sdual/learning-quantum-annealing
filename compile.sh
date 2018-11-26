@@ -1,2 +1,4 @@
-platex -output-directory=output/ tex/note1.tex
-dvipdfmx -o docs/note1.pdf output/note1.dvi
+#!/bin/bash
+
+platex -output-directory=output/ tex/${1}.tex
+dvipdfmx -o docs/${1}.pdf output/${1}.dvi

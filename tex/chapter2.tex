@@ -1,0 +1,73 @@
+\documentclass[a4j,11pt]{jreport}
+\usepackage{graphicx}
+%\usepackage{wrapfig}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{pifont}
+\usepackage{bm}
+\usepackage{ascmac}
+\usepackage{color}
+\usepackage[hypertex]{hyperref}
+%\usepackage{hyperref}
+
+\begin{document}
+
+\chapter{hoge}
+
+\chapter{Transverse Ising Chain}
+
+\section{Symmetries and the Critical Point}
+
+\subsection{Duality Symmetry of the Transverse Ising Model}
+
+The duality transformation.
+\begin{eqnarray}
+\tau_{j}^x = S_{j}^z S_{j+1}^z \\
+\tau_{j}^z = \prod_{k \le j} S_k^x \ .
+\end{eqnarray}
+
+(反)交換関係を確認する。
+
+\begin{eqnarray}
+ \{ \tau_{i}^x , \tau_{i}^z  \} &=& S_{i}^z S_{i+1}^z \left ( \prod_{k \le i} S_{k}^x \right ) + \left ( \prod_{k \le i}  S_{k}^x \right ) S_{i}^z S_{i+1}^z \nonumber \\
+&=&
+S_{i}^z S_{i}^x S_{i+1} \left ( \prod_{k < i} S_{k}^x \right ) + \left ( \prod_{k < i}  S_{k}^x \right ) S_{i}^x S_{i}^z S_{i+1}^z \nonumber \\
+&=&
+- S_{i}^x S_{i}^z  S_{i+1} \left ( \prod_{k < i} S_{k}^x \right ) + \left ( \prod_{k < i}  S_{k}^x \right ) S_{i}^x S_{i}^z S_{i+1}^z = 0 \ .
+\end{eqnarray}
+3番目の等号は $S_i^x, S_i^z$ についての反交換関係を使った。
+
+交換関係については、$\tau_{i}^x, \tau_{j}^z$ 内それぞれにに同じ site の spin が含まれなければ明らかに交換する。$i \neq j$であり、かつ、同じ site の spin が含まてている場合 $ i < j $ を考える。
+
+\begin{eqnarray}
+ \left [
+\tau_{i}^x, \tau_{j}^z
+\right ]
+&=&
+\left [
+S_{i}^z S_{i+1}^z, \prod_{k < j} S_k^x
+ \right ] \nonumber \\
+&=&
+S_{1}^x \cdots S_{i-1}^x
+ \left [
+S_{i}^z S_{i+1}^z,
+S_{i}^x S_{i+1}^x
+ \right ]
+S_{i+2}^x \cdots S_{j-1}^x \ .
+\end{eqnarray}
+
+この中で注意しなければならないのは、$k=i$ となる場合の連続する $k, k+1$ 番目についてである。
+
+\begin{eqnarray}
+ \left [
+S_{i}^z S_{i+1}^z,
+S_{i}^x S_{i+1}^x
+ \right ] &=&
+S_{i}^z S_{i+1}^z S_{i}^x S_{i+1}^x - S_{i}^x S_{i+1}^x S_{i}^z S_{i+1}^z \nonumber \\
+&=&
+S_{i}^z S_{i}^x  S_{i+1}^z S_{i+1}^x - S_{i}^x S_{i}^z S_{i+1}^x  S_{i+1}^z \nonumber \\
+&=&
+S_{i}^z S_{i}^x  S_{i+1}^z S_{i+1}^x - S_{i}^z S_{i}^x  S_{i+1}^z S_{i+1}^x \nonumber \\
+&=& 0 \ .
+\end{eqnarray}
+
+\end{document}
