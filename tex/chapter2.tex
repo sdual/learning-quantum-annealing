@@ -1,4 +1,4 @@
-\documentclass[a4j,11pt]{jreport}
+\documentclass[11pt, a4]{report}
 \usepackage{graphicx}
 %\usepackage{wrapfig}
 \usepackage{amsmath,amsthm,amssymb}
@@ -19,13 +19,13 @@
 
 \subsection{Duality Symmetry of the Transverse Ising Model}
 
-The duality transformation.
+The duality transformation is defined as following.
 \begin{eqnarray}
 \tau_{j}^x = S_{j}^z S_{j+1}^z \\
 \tau_{j}^z = \prod_{k \le j} S_k^x \ .
 \end{eqnarray}
 
-(反)交換関係を確認する。
+The duality transformed spin operators at the same site anticommute with each other.
 
 \begin{eqnarray}
  \{ \tau_{i}^x , \tau_{i}^z  \} &=& S_{i}^z S_{i+1}^z \left ( \prod_{k \le i} S_{k}^x \right ) + \left ( \prod_{k \le i}  S_{k}^x \right ) S_{i}^z S_{i+1}^z \nonumber \\
@@ -34,9 +34,11 @@ S_{i}^z S_{i}^x S_{i+1} \left ( \prod_{k < i} S_{k}^x \right ) + \left ( \prod_{
 &=&
 - S_{i}^x S_{i}^z  S_{i+1} \left ( \prod_{k < i} S_{k}^x \right ) + \left ( \prod_{k < i}  S_{k}^x \right ) S_{i}^x S_{i}^z S_{i+1}^z = 0 \ .
 \end{eqnarray}
-3番目の等号は $S_i^x, S_i^z$ についての反交換関係を使った。
 
-交換関係については、$\tau_{i}^x, \tau_{j}^z$ 内それぞれにに同じ site の spin が含まれなければ明らかに交換する。$i \neq j$であり、かつ、同じ site の spin が含まてている場合 $ i < j $ を考える。
+The third equality of the above calculation uses anti-commutation relation of $S_i^x$ and $S_i^z$.
+
+The $\tau_{i}^{\alpha}$ operators that contain only spins on different sites clearly commute.
+Therefore, we consider the $\tau_{i}^{\alpha}$ operators that contain a spin on the same site.
 
 \begin{eqnarray}
  \left [
